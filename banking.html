@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking App</title>
+    <link rel="stylesheet" href="banking.css">
+</head>
+<body>
+    <center><h1>Banking Apllication</h1></center>
+    <div class="container" id="loginContainer">
+        <center><h2>Login</h2></center>
+        <form id="loginForm">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username"><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+            <input type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+    </div>
+
+    <div class="container" id="registerContainer" style="display: none;">
+        <center><h2>Register</h2></center>
+        <form id="registerForm">
+            <label for="newUsername">Username:</label><br>
+            <input type="text" id="newUsername" name="newUsername"><br>
+            <label for="newPassword">Password:</label><br>
+            <input type="password" id="newPassword" name="newPassword"><br><br>
+            <input type="submit" value="Register">
+        </form>
+        <p>Already have an account? <a href="#" id="showLogin">Login here</a></p>
+    </div>
+
+    <div id="dashboard" class="container" style="display: none;">
+        <h2>Welcome, <span id="usernameDisplay"></span></h2>
+        <p id="balanceDisplay">Balance: $<span id="balance"></span></p>
+        <form id="withdrawForm">
+            <label for="withdrawAmount">Withdraw amount:</label><br>
+            <input type="number" id="withdrawAmount" name="withdrawAmount" min="0" step="0.01"><br>
+            <input type="submit" value="Withdraw">
+        </form>
+        <form id="depositForm">
+            <label for="depositAmount">Deposit amount:</label><br>
+            <input type="number" id="depositAmount" name="depositAmount" min="0" step="0.01"><br>
+            <input type="submit" value="Deposit">
+        </form>
+        <button id="logoutButton">Logout</button>
+    </div>
+
+    <script src="banking.js"></script>
+</body>
+</html>
